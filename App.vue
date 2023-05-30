@@ -5,6 +5,10 @@ import imgMain from '@/assets/images/illustration-2.svg?url'
 import iconQuotes from '@/assets/images/icon-quotes.svg?url'
 import iconArrow from '@/assets/images/icon-arrow.svg?component'
 import imgAvatar from '@/assets/images/avatar-testimonial.jpg'
+import iconPhone from '@/assets/images/icon-phone.svg?component'
+import iconEmail from '@/assets/images/icon-email.svg?component'
+import iconFacebook from '@/assets/images/icon-facebook.svg?url'
+
 
 
 export default {
@@ -15,10 +19,13 @@ export default {
       imgMain,
       iconQuotes,
       imgAvatar,
+      iconFacebook,
     }
   },
   components: {
     iconArrow,
+    iconPhone,
+    iconEmail,
   }
 }
 </script>
@@ -62,8 +69,8 @@ export default {
     <div class=" flex flex-col items-center px-7 bg-neo-grayish-blue">
       <img class=" w-[320px] dsk:w-[542px]" :src="imgMain" alt="imgMain">
       <div class=" w-[320px] dsk:w-[648px] text-center">
-        <h2>Stay productive, wherever you are</h2>
-        <div class=" dsk:w-[529px]">
+        <h2 class=" text-[16px] leading-[24px] font-raleway font-bold">Stay productive, wherever you are</h2>
+        <div class=" text-[14px] leading-[21px] dsk:w-[529px] font-open-sans">
           <p>
             Never let location be an issue when accessing your files. Fylo has you
             covered for all of your file storage needs.
@@ -74,9 +81,8 @@ export default {
           </p>
         </div>
       </div>
-
       <div class=" flex gap-2 items-center border-b border-neo-moderate-cyan">
-        <button class=" text-neo-moderate-cyan">See how Fylo works</button>
+        <button class=" text-neo-moderate-cyan text-[12px] leading-[16px]">See how Fylo works</button>
         <iconArrow />
       </div>
 
@@ -101,10 +107,41 @@ export default {
         </div>
       </div>
     </div>
+    <section class=" flex flex-col items-center h-[345px] bg-neo-desaturated-blue px-12 pt-[54px] text-white text-center">
+      <h2 class=" text-[18px] leading-[24px] font-raleway font-bold">Get early access today</h2>
+      <p class=" text-[14px] leading-[21px] font-open-sans">
+        It only takes a minute to sign up and our free starter tier is extremely generous.
+        If you have any questions, our support team would be happy to help you.
+      </p>
+      <div class=" flex flex-col gap-2 w-[240px]">
+        <input class=" h-8 pl-2 text-neo-light-gray text-[10px] leading-[12px] font-raleway" type="email"
+          placeholder="email@example.com">
+        <button class=" h-8 bg-neo-bright-blue" type="submit">Get Started For Free</button>
+      </div>
+    </section>
   </main>
+  <footer class=" bg-neo-dark-blue h-[590px] text-white">
+    <div>
+      <div class=" flex">
+        <iconPhone />
+        <h5>Phone: +1-543-123-4567</h5>
+      </div>
+      <div class=" flex">
+        <iconEmail />
+        <h5>example@fylo.com</h5>
+      </div>
+    </div>
+    <div>
+      <h5>About Us</h5>
+      <h5>Jobs</h5>
+      <h5>Press</h5>
+      <h5>Blog</h5>
+    </div>
+    <div>
+      <h5>Contact Us</h5>
+      <h5>Terms</h5>
+      <h5>Privacy</h5>
+    </div>
+    <img class=" border border-white rounded-full w-12" :src="iconFacebook" alt="iconFacebook">
+  </footer>
 </template>
-<style>
-/* h6{
-  font-size: xx-small;
-} */
-</style>
