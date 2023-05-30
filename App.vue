@@ -1,5 +1,6 @@
 <script>
 import logo from '@/assets/images/logo.svg?url'
+import logoDark from '@/assets/images/logo-dark.svg?url'
 import imgHeader from '@/assets/images/illustration-1.svg?url'
 import imgMain from '@/assets/images/illustration-2.svg?url'
 import iconQuotes from '@/assets/images/icon-quotes.svg?url'
@@ -7,22 +8,25 @@ import iconArrow from '@/assets/images/icon-arrow.svg?component'
 import imgAvatar from '@/assets/images/avatar-testimonial.jpg'
 import iconPhone from '@/assets/images/icon-phone.svg?component'
 import iconEmail from '@/assets/images/icon-email.svg?component'
-import iconFacebook from '@/assets/images/icon-facebook.svg?url'
 
-
+import BtnNetwork from './components/BtnNetwork.vue'
+import FooterContent from './components/FooterContent.vue'
 
 export default {
   data() {
     return {
       logo,
+      logoDark,
       imgHeader,
       imgMain,
       iconQuotes,
       imgAvatar,
-      iconFacebook,
     }
   },
   components: {
+    BtnNetwork,
+    FooterContent,
+    // SVG's
     iconArrow,
     iconPhone,
     iconEmail,
@@ -120,28 +124,35 @@ export default {
       </div>
     </section>
   </main>
-  <footer class=" bg-neo-dark-blue h-[590px] text-white">
-    <div>
-      <div class=" flex">
+  <footer class=" flex flex-col gap-8 bg-neo-dark-blue h-[590px] px-10 pt-16 text-white font-open-sans">
+    <img class=" w-[105px]" :src="logoDark" alt="logoDark">
+    <div class=" flex flex-col gap-4 text-base">
+      <div class=" flex items-center gap-4">
         <iconPhone />
         <h5>Phone: +1-543-123-4567</h5>
       </div>
-      <div class=" flex">
+      <div class=" flex items-center gap-4">
         <iconEmail />
         <h5>example@fylo.com</h5>
       </div>
     </div>
-    <div>
-      <h5>About Us</h5>
-      <h5>Jobs</h5>
-      <h5>Press</h5>
-      <h5>Blog</h5>
+    <div class=" flex flex-col gap-8 text-[16px] leading-[22px]">
+      <div class=" flex flex-col gap-4">
+        <FooterContent content="About Us" />
+        <FooterContent content="Jobs" />
+        <FooterContent content="Press" />
+        <FooterContent content="Blog" />
+      </div>
+      <div class=" flex flex-col gap-4">
+        <FooterContent content="Contact Us" />
+        <FooterContent content="Terms" />
+        <FooterContent content="Privacy" />
+      </div>
     </div>
-    <div>
-      <h5>Contact Us</h5>
-      <h5>Terms</h5>
-      <h5>Privacy</h5>
+    <div class=" flex justify-center gap-[10px]">
+      <BtnNetwork netName="facebook" />
+      <BtnNetwork netName="twitter"/>
+      <BtnNetwork netName="instagram" />
     </div>
-    <img class=" border border-white rounded-full w-12" :src="iconFacebook" alt="iconFacebook">
   </footer>
 </template>
