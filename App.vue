@@ -108,11 +108,11 @@ export default {
   </header>
   <main class=" mt-[130px] dsk:mt-[244px]">
     <div
-      class=" relative flex flex-col dsk:flex-row-reverse dsk:justify-between items-center dsk:items-start gap-[88px] pb-20 dsk:pb-24 dsk:pt-20 bg-neo-bg">
+      class=" relative flex flex-col dsk:flex-row-reverse dsk:justify-between items-center dsk:items-start gap-[88px] dsk:px-20 pb-20 dsk:pb-24 dsk:pt-20 bg-neo-bg">
       <img class=" absolute dsk:hidden -top-10 h-10 w-full" :src="curveMobile" alt="curveMobile">
       <img class=" absolute hidden dsk:block -top-20 h-20 w-full" :src="curveDesktop" alt="curveDesktop">
       <img class=" w-[320px] dsk:w-[542px] mt-12" :src="imgMain" alt="imgMain">
-      <div class=" flex flex-col items-center dsk:items-start gap-9 dsk:gap-4 dsk:pl-20">
+      <div class=" flex flex-col items-center dsk:items-start gap-9 dsk:gap-4">
         <div class=" flex flex-col gap-6 dsk:gap-[38px] w-[320px] dsk:w-[650px] text-center dsk:text-left">
           <h2
             class=" text-neo-dark-blue text-[16px] dsk:text-[40px] leading-[24px] dsk:leading-[47px] font-raleway font-bold">
