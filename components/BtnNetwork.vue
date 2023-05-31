@@ -18,7 +18,7 @@ export default {
 <template>
    <!-- <h5>{{ isHover }}</h5> -->
    <button
-      class=" flex justify-center items-center w-7 h-7 p-[6px] border border-white hover:border-neo-hover-blue rounded-full"
+      class=" flex justify-center items-center w-7 dsk:w-8 h-7 dsk:h-8 p-[6px] border border-white hover:border-neo-hover-blue rounded-full"
       @mouseover="isHover = true" @mouseout="isHover = false">
       <!-- Networks -->
       <svg v-if="netName == 'facebook'" viewBox="0 0 56.693 56.693" xml:space="preserve"
